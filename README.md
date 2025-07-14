@@ -150,6 +150,9 @@ Example output:
 
 📁 Reports are saved under `/test_results/` in `.csv`, `.json`, and `.html` formats.
 
+<img width="850" height="923" alt="image" src="https://github.com/user-attachments/assets/35c832d1-3a59-4dc7-ace1-e17bdbb4c3ce" />
+
+
 ---
 
 ## 📦 Dependencies
