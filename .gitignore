@@ -1,0 +1,26 @@
+# Python virtual environments
+.venv/
+env/
+ENV/
+venv/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# IDE config files
+.idea/
+*.iml
+.vscode/
+
+# Test result files
+*.db
+*.csv
+*.html
+*.json
+test_results/
+
+# OS files
+.DS_Store
+Thumbs.db
