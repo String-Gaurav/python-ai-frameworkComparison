@@ -8,6 +8,8 @@ This repository contains a modular, extensible framework for testing and compari
 
 ## 📌 Table of Contents
 
+## Table of Contents
+
 - [Features](#features)
 - [Project Structure](#project-structure)
 - [Getting Started](#getting-started)
@@ -18,6 +20,7 @@ This repository contains a modular, extensible framework for testing and compari
 - [Dependencies](#dependencies)
 - [Roadmap](#roadmap)
 - [Author](#author)
+
 
 ---
 
