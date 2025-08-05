@@ -26,16 +26,16 @@ This repository contains a modular, extensible framework for testing and compari
 
 ## 🚀 Features
 
-- 🔌 Plugin-style architecture for model providers (Ollama, OpenAI, etc.)
-- 🧪 Runs categorized prompt tests across any model
-- 🧠 Intelligent response scoring:
-  - Length analysis
-  - Factual confidence
-  - Code quality
-  - Creativity detection
-- 🗂️ Built-in test cases across math, reasoning, coding, factual, and creative categories
-- 📊 HTML + CSV reports with comparative insights
-- 🗃️ SQLite storage of all results for future querying
+- 🔌 **Multi-Provider Support**: Ollama, OpenAI, Anthropic with automatic fallback
+- 🧪 **Comprehensive Testing**: Categorized prompt tests with customizable test suites
+- 🧠 **Intelligent Scoring**: Multi-dimensional analysis (length, confidence, creativity, code quality)
+- ⚡ **Parallel Execution**: Multi-threaded testing for improved performance
+- 📊 **Rich Reporting**: Interactive HTML reports with Plotly charts and visualizations
+- 🗃️ **Persistent Storage**: SQLite database with advanced querying and filtering
+- ⚙️ **Configuration Management**: Flexible JSON-based configuration with environment variable support
+- 🛠️ **Developer Tools**: Comprehensive test suite, code quality tools, CI/CD pipeline
+- 📈 **Performance Benchmarking**: Built-in benchmarking tools with statistical analysis
+- 🖥️ **Enhanced CLI**: Full-featured command-line interface with subcommands and filtering
 
 ---
 
@@ -83,6 +83,37 @@ pip install -r requirements.txt
 
 ### 4. Run the Framework
 
+Using the enhanced CLI:
+
+```bash
+# Basic usage
+python cli.py run --models llama3.2 mistral:7b --categories math programming
+
+# With OpenAI/Anthropic models (requires API keys)
+export OPENAI_API_KEY="your-key-here"
+export ANTHROPIC_API_KEY="your-key-here"
+python cli.py run --models gpt-3.5-turbo claude-3-haiku llama3.2
+
+# Parallel execution
+python cli.py run --models llama3.2 mistral:7b --parallel --workers 4
+
+# Custom test file
+python cli.py run --models llama3.2 --test-file custom_tests.json
+
+# Benchmark models
+python cli.py benchmark --models llama3.2 mistral:7b --iterations 5
+
+# Generate enhanced reports
+python cli.py report --format enhanced --output results.html
+
+# Check system status
+python cli.py status --check-models
+
+# List available models
+python cli.py list-models --provider ollama
+```
+
+Legacy interface (still supported):
 ```bash
 python test_runner.py
 ```
@@ -178,10 +209,20 @@ beautifulsoup4
 
 - [x] SQLite-backed persistent storage
 - [x] Visual HTML report with comparison
-- [ ] OpenAI & Claude support
-- [ ] Parallel test execution (multithreaded)
-- [ ] CLI test filtering (by category, model)
-- [ ] Graphs & charts in reports (Plotly or Chart.js)
+- [x] OpenAI & Claude support
+- [x] Parallel test execution (multithreaded)
+- [x] CLI test filtering (by category, model)
+- [x] Graphs & charts in reports (Plotly)
+- [x] Enhanced configuration management
+- [x] Comprehensive testing suite
+- [x] CI/CD pipeline with GitHub Actions
+- [x] Code quality tools (Black, Flake8, MyPy)
+- [x] Performance benchmarking
+- [ ] Real-time test execution monitoring
+- [ ] Docker containerization
+- [ ] Web dashboard interface
+- [ ] Custom scoring algorithms
+- [ ] Model fine-tuning integration
 
 ---
 
